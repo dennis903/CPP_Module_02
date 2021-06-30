@@ -6,7 +6,7 @@
 /*   By: hyeolee <hyeolee@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/30 15:17:36 by hyeolee           #+#    #+#             */
-/*   Updated: 2021/06/30 18:07:57 by hyeolee          ###   ########.fr       */
+/*   Updated: 2021/06/30 18:14:32 by hyeolee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,13 @@ Fixed &Fixed::operator=(const Fixed &Type)
 	return (*this);
 }
 
-void Fixed::setRawBits(int const raw)
+void	Fixed::setRawBits(int const raw)
 {
 	this->value = raw;
+}
+
+int		Fixed::getRawBits(void) const
+{
+	std::cout << "getRawBits member function called" << std::endl;
+	return (this->value);
 }
